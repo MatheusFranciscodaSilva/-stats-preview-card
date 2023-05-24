@@ -1,0 +1,63 @@
+@media screen and (min-width: 700px){
+    .container{
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-between;
+        width: 70%;
+        .img{
+            width: 50%;
+            
+            img{
+                
+                background-size: contain;
+                width: 100%;
+                border-radius: 0 10px 10px 0
+            }
+        }
+        .img::after{
+            content:"";
+            position:absolute;
+            top: 0;
+            left: 0;
+            background: $color-secondary;
+            filter: brightness(55%) contrast(150%) saturate(160%);
+            border-radius: 0 10px 10px 0;
+            width:100%;
+            height: 100%;
+        }
+        .content{
+            //background-color: red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            margin-left: 5%;
+
+            .title, .text{
+                text-align: left;
+            }
+            .title{
+                font-size: 45px;
+                .emphasis{
+                    font-size: 45px;
+                }
+            }
+            .text{
+                line-height: 30px;
+                margin-bottom: 70px;
+            }
+            .information{
+                //background-color: tomato;
+                display: flex;
+                width: 90%;
+                flex-direction: row;
+                
+                .group{
+                    margin-right: 17%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

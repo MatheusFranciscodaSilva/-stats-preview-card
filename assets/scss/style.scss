@@ -1,0 +1,102 @@
+@import "variable.scss";
+@import "attribution.scss";
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color:$color-white;
+
+}
+body{
+    background: $main-background;
+}
+.main-container{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    border-radius: 10px;
+    background: $background;
+    
+    .img{
+        display: block;
+        position: relative;
+        width: 350px;
+        border-radius: 10px 10px 0 0;
+        img{
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            
+        }
+    }
+    .img::after{
+        content: "";
+        position:absolute;
+        top: 0;
+        left: 0;
+        background: $color-secondary;
+        filter: brightness(55%) contrast(150%) saturate(160%);
+        border-radius: 10px 10px 0 0;
+        width:350px;
+        height: 289px;
+    }
+    .content{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:80%;
+
+        .title{
+            text-align: center;
+            font-size:30px;
+            font-weight: 700;
+            margin: 35px 0 15px; 
+            .emphasis{
+                font-size: 30px;
+                font-weight: 700;
+                color: $color-primary;
+            }
+        }
+        .text{
+            color:$text-paragraph;
+            text-align: center;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+        .information{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0 20px;
+            .group{
+                text-align: center;
+                margin-bottom: 20px;
+                .numbers{
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-bottom: 5px;   
+                }
+                .kinds{
+                    font-family: 'Lexend Deca',sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    color: $color-stats;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    
+}
+@import "media-querie.scss";
